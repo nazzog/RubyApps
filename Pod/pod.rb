@@ -1,4 +1,5 @@
 #Programa para estudo de Pesquisa e Ordenação de Dados
+load 'sort.rb'
 
 puts "----------------ROGRAMA DE PESQUISA E ORDENAÇÃO DE DADOS----------------"
 
@@ -9,25 +10,25 @@ end
 sair = false
 option = 0
 until sair == true
-  puts "O que você deseja fazer?"
-  puts "1 - Ordenar um lista de dados."
+  puts "\nO que você deseja fazer?"
+  puts "\n1 - Ordenar um lista de dados."
   puts "2 - Pesquisar dados em uma lista."
   puts "3 - Sair do programa"
   print "Opção: "
   option = gets.chomp.to_i
   case option
     when 1
-      puts "1 - Gerar lista randômica."
+      puts "\n1 - Gerar lista randômica."
       puts "2 - Criar uma lista."
       print "Opção: "
       option = gets.chomp.to_i
       case option
         when 1
-        print "Digite o tamanho da lista: "
+        print "\nDigite o tamanho da lista: "
         i = gets.chomp.to_i
           array = Array.new(i) { Random.rand(1..(i*10)) }
           print "Array gerado -> #{array}"
-          puts "Escolha o método de ordenação: "
+          puts "\n\nEscolha o método de ordenação: "
           puts "1 - Bubble Sort."
           puts "2 - Quick Sort."
           puts "3 - Insertion Sort."
@@ -36,7 +37,7 @@ until sair == true
           option = gets.chomp.to_i
           case option
             when 1
-              puts "BubbleSort(array)."
+              bubbleSort(array)
             when 2
               puts "QuickSort(array)."
             when 3
