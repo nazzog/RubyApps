@@ -13,28 +13,29 @@ def bubbleSort(array)
         array[j] = array[j + 1]
         array[j + 1] = aux
       end
+      #print "\n- #{array}"
     end
   end
   end_time = Time.now
-  return print "#{array} \n Executado em: #{(end_time - begin_time)} Segundos"
+  return print "\n\nArray Ordenado - #{array} \n Executado em: #{(end_time - begin_time)} Segundos\n\n"
 end
 
 #Ordenação por QUICKSORT
 def quickSort(array)
-  puts "FUNCIONOU!!! o array é #{array}"
+  puts "\nFUNCIONOU!!! o array é #{array}"
 end
 
 #Ordenação por INSERTIONSORT
 def insertionSort(array)
-  puts "FUNCIONOU!!! o array é #{array}"
+  puts "\nFUNCIONOU!!! o array é #{array}"
 end
 
 #Ordenação por SELECTIONSORT
 def selectionSort(array)
-  puts "FUNCIONOU!!! o array é #{array}"
+  puts "\nFUNCIONOU!!! o array é #{array}"
 end
 
 #Ordenação por SHELLSORT
 def shellSort(array)
-  puts "FUNCIONOU!!! o array é #{array}"
+  puts "\nFUNCIONOU!!! o array é #{array}"
 end
