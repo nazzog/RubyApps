@@ -34,28 +34,35 @@ while i > 0
               puts "----------------SOFTWARE PARA PESQUISA E ORDENAÇÃO DE DADOS----------------"
               puts "#{i-2})MENU > #{i-1})ORDENAÇÃO > #{i})ORDENAÇÃO INTERNA\n"
               puts "Escolha o método de ordenação: "
-              puts "1 - Bubble Sort"
-              puts "2 - Quick Sort"
-              puts "3 - Insertion Sort"
-              puts "4 - Selection Sort"
-              puts "5 - Voltar"
+              puts "1 - Selection Sort"
+              puts "2 - Insertion Sort"
+              puts "3 - Bubble Sort"
+              puts "4 - Quick Sort"
+              puts "5 - Heap Sort"
+              puts "6 - Shell Sort"
+              puts "7 - Merge Sort"
+              puts "8 - Bucket Sort"
+              puts "9 - Radix Sort"
+              puts "10 - Counting Sort"
+              puts "11 - Tabela Comparativa de Complexidade"
+              puts "0 - Voltar"
               print "Opção: "
               option = gets.chomp.to_i
               system "clear"
               case option
                 when 1
                   puts "----------------SOFTWARE PARA PESQUISA E ORDENAÇÃO DE DADOS----------------"
-                  puts "#{i-2})MENU > #{i-1})ORDENAÇÃO > #{i})ORDENAÇÃO INTERNA > #{i+1})BUBBLE SORT\n"
-                  bubbleSort
-                  i -= 1
+                  puts "#{i-2})MENU > #{i-1})ORDENAÇÃO > #{i})ORDENAÇÃO INTERNA > #{i+1})SELECTION SORT\n"
+                  selectionSort
                 when 2
-                  puts "QuickSort(array)."
-                  i -= 1
-                when 3
                   puts "InsertionSort(array)."
                   i -= 1
+                when 3
+                  puts "----------------SOFTWARE PARA PESQUISA E ORDENAÇÃO DE DADOS----------------"
+                  puts "#{i-2})MENU > #{i-1})ORDENAÇÃO > #{i})ORDENAÇÃO INTERNA > #{i+1})BUBBLE SORT\n"
+                  bubbleSort
                 when 4
-                  puts "SelectionSort(array)."
+                  puts "QuickSort(array)."
                   i -= 1
                 when 5
                   i -= 1

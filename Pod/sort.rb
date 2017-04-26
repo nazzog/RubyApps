@@ -2,6 +2,28 @@
 load 'sortInfo.rb'
 load 'auxMeths.rb'
 
+
+#Ordenação por SELECTIONSORT
+def selectionSort
+  puts "1 - Informações sobre o método"
+  puts "2 - Ordenar uma lista de dados aleatória"
+  puts "3 - Voltar"
+  print "Opção: "
+  op = gets.chomp.to_i
+  case op
+    when 1
+      selectionInfo
+    when 2
+      array = geraArray
+
+    when 3
+      #Sair
+    else
+      option_error
+  end
+end
+
+
 #Ordenação por BUBBLESORT
 def bubbleSort
   puts "1 - Informações sobre o método"
@@ -28,7 +50,7 @@ def bubbleSort
         end
       end
       end_time = Time.now
-      return print "\n\nArray Ordenado - #{array} \n\nTempo de Execução: #{(end_time - begin_time)} Segundos\n\n"
+      print "\n\nArray Ordenado - #{array} \n\nTempo de Execução: #{(end_time - begin_time)} Segundos\n\n"
     when 3
       #sair
     else
@@ -43,11 +65,6 @@ end
 
 #Ordenação por INSERTIONSORT
 def insertionSort(array)
-  puts "\nFUNCIONOU!!! o array é #{array}"
-end
-
-#Ordenação por SELECTIONSORT
-def selectionSort(array)
   puts "\nFUNCIONOU!!! o array é #{array}"
 end
 
