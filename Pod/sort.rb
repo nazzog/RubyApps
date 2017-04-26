@@ -7,7 +7,7 @@ load 'auxMeths.rb'
 def selectionSort
   puts "1 - Informações sobre o método"
   puts "2 - Ordenar uma lista de dados aleatória"
-  puts "3 - Voltar"
+  puts "0 - Voltar"
   print "Opção: "
   op = gets.chomp.to_i
   case op
@@ -15,8 +15,27 @@ def selectionSort
       selectionInfo
     when 2
       array = geraArray
-
-    when 3
+      i = 0
+      j = 0
+      min = 0
+      aux = 0
+      begin_time = Time.now
+      for i in 0...array.length-1
+        min = i
+        for j in i+1...array.length
+          if array[j] < array[min]
+            min = j
+          end
+        end
+        if i != min
+          aux = array[i]
+          array[i] = array[min]
+          array[min] = aux
+        end
+      end
+      end_time = Time.now
+      print "\n\nArray Ordenado - #{array} \n\nTempo de Execução: #{(end_time - begin_time)} Segundos\n\n"
+    when 0
       #Sair
     else
       option_error
@@ -28,7 +47,7 @@ end
 def bubbleSort
   puts "1 - Informações sobre o método"
   puts "2 - Ordenar uma lista de dados aleatória"
-  puts "3 - Voltar"
+  puts "0 - Voltar"
   print "Opção: "
   op = gets.chomp.to_i
   case op
@@ -51,7 +70,7 @@ def bubbleSort
       end
       end_time = Time.now
       print "\n\nArray Ordenado - #{array} \n\nTempo de Execução: #{(end_time - begin_time)} Segundos\n\n"
-    when 3
+    when 0
       #sair
     else
       option_error

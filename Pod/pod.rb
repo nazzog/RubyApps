@@ -10,7 +10,7 @@ while i > 0
   puts "#{i})MENU\n"
   puts "1 - Ordenação de Dados"
   puts "2 - Pesquisa de Dados"
-  puts "3 - Sair"
+  puts "0 - Sair"
   print "Opção: "
   option = gets.chomp.to_i
   system "clear"
@@ -23,7 +23,7 @@ while i > 0
         puts "#{i-1})MENU > #{i})ORDENAÇÃO DE DADOS\n"
         puts "1 - Ordenação Interna"
         puts "2 - Ordenação Externa"
-        puts "3 - Voltar"
+        puts "0 - Voltar"
         print "Opção: "
         option = gets.chomp.to_i
         system "clear"
@@ -64,7 +64,7 @@ while i > 0
                 when 4
                   puts "QuickSort(array)."
                   i -= 1
-                when 5
+                when 0
                   i -= 1
                 else
                   option_error
@@ -78,7 +78,7 @@ while i > 0
 
                 i -= 1
               end
-          when 3
+          when 0
             #VOLTAR
             i -= 1
           else
@@ -93,7 +93,7 @@ while i > 0
         puts "#{i-1})MENU > #{i})PESQUISA DE DADOS\n"
         puts "1 - Pesquisa em Memória Primária"
         puts "2 - Pesquisa em Memória Secundária"
-        puts "3 - Voltar"
+        puts "0 - Voltar"
         print "Opção: "
         option = gets.chomp.to_i
         system "clear"
@@ -112,7 +112,7 @@ while i > 0
               puts "#{i-2})MENU > #{i-1})PESQUISA DE DADOS > #{i}) PESQUISA EM MEMÓRIA SECUNDÁRIA\n"
               i -= 1
             end
-          when 3
+          when 0
             #VOLTAR
             i -= 1
           else
@@ -121,7 +121,7 @@ while i > 0
       end
     #FIM WHEN 1.2 PESQUISA DE DADOS---------------------------------------------
     #SAIR DO PROGRAMA
-    when 3
+    when 0
       puts "PROGRAMA ENCERRADO!\n"
       i -= 1
     else
