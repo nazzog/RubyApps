@@ -43,3 +43,11 @@ end
 def bubbleInfo
   puts "INFORMANDO"
 end
+
+def insertionInfo
+  puts "INFORMANDO"
+end
+
+def shellInfo
+  puts "INFORMANDO"
+end
